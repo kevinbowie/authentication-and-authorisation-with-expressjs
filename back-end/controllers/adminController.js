@@ -71,7 +71,7 @@ const update_user_profile = async(req, res) => {
 
 const load_user_profile_by_id = async(req, res) => {
     try {
-        let { user_id } = req.params.user_id
+        let { user_id } = req.params
 
         let user = await UserModel.findOne({
             where: { id: user_id },
